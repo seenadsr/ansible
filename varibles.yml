@@ -19,7 +19,7 @@
 - name: task level variables
   hosts: all
   tasks:
-    - name : task level veriables
+    - name: task level veriables
       ansibl.builtin.debug:
         msg: URL = {{URL}}
       vars:
