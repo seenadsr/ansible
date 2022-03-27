@@ -27,9 +27,14 @@
 
 - name: variable order from file
   hosts: all
-  vars_files:
-    - sample-vars.yml
   tasks:
     - name: variable order from file
       ansible.builtin.debug:
         msg: URL = {{URL}}
+
+- name: get variables from setup
+  hosts: all
+  tasks:
+    - name : get variables from setup
+      ansible.builtin.debug:
+        msg= Platform = {{ansible_architecture}}, Ipaddress = {{ansible_eth0.ipv4.address}}
