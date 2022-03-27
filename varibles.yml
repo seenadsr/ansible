@@ -20,7 +20,7 @@
   hosts: all
   tasks:
     - name: task level veriables
-      ansibl.builtin.debug:
+      ansible.builtin.debug:
         msg: URL = {{URL}}
       vars:
          URL: task.example.com
