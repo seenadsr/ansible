@@ -4,3 +4,6 @@
     - name: print hellow world
       ansible.builtin.debug:
         msg: "Hellow world"
+    - name: check process status
+      ansible.builtin.shell:
+       command: systemctl status nginx
