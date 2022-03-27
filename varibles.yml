@@ -31,4 +31,4 @@
   tasks:
     - name : get variables from setup
       ansible.builtin.debug:
-        msg= Platform = {{ansible_architecture}}, Ipaddress = {{ansible_eth0.ipv4.address}}
+        msg: Platform = {{ansible_architecture}}, Ipaddress = {{ansible_eth0.ipv4.address}}
