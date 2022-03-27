@@ -1,4 +1,4 @@
- -name: sample play
+- name: sample play
   hosts: all
   tasks:
     - name: print hellow world
