@@ -24,3 +24,9 @@
         msg: URL = {{URL}}
       vars:
          URL: task.example.com
+- name: variable order from file
+  hosts: all
+  tasks:
+    - name: variable order from file
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
