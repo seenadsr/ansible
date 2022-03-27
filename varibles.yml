@@ -15,3 +15,12 @@
    - name: print variable from file
      ansible.builtin.debug:
        msg: URL = {{URL}}
+
+- name: task level variables
+  hosts: all
+  tasks:
+    - name : task level veriables
+      ansibl.builtin.debug:
+        msg: URL = {{URL}}
+      vars:
+         URL: task.example.com
