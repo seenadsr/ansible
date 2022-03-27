@@ -1,6 +1,6 @@
  -name: sample play
   host: all
-  tasks:
+   tasks:
     - name: print hellow world
       ansible.builtin.debug:
         msg: "Hellow world"
