@@ -5,5 +5,4 @@
       ansible.builtin.debug:
         msg: "Hellow world"
     - name: check process status
-      ansible.builtin.shell:
-       command: systemctl status nginx
+      ansible.builtin.shell: systemctl status nginx
