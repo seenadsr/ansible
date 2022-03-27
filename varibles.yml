@@ -27,6 +27,8 @@
 
 - name: variable order from file
   hosts: all
+  vars_files:
+    - sample-vars.yml
   tasks:
     - name: variable order from file
       ansible.builtin.debug:
