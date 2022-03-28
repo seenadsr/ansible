@@ -42,7 +42,7 @@
 
     - name: ste a fact
       ansible.builtin.set_fact
-      OUTPUT: "{{OUT.stdout}}"
+        OUTPUT: "{{OUT.stdout}}"
 
     - name: print out put of register
       ansible.builtin.debug:
