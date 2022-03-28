@@ -1,14 +1,4 @@
-- name: setup frontend component
-  hosts: FRONTEND
-  roles:
-    - frontend
-
-- name: setup frontend component
-  hosts: MONGODB
-  roles:
-    - mongodb
-
 - name: roboshop setup
   hosts: "{{HOST}}"
   roles:
-    - "{{roles_names}}"
+    - "{{role_name}}"
