@@ -32,3 +32,17 @@
     - name : get variables from setup
       ansible.builtin.debug:
         msg: Platform = {{ansible_architecture}}, Ipaddress = {{ansible_eth0.ipv4.address}}
+
+- name: Get register out put
+  hosts: all
+  tasks:
+    - name: Register out put
+      ansible.builtin.shell: uptime
+      register: OUT
+
+    - name: print out put of register
+      ansible.builtin.debug:
+        msg: {{out}}
+
+
+
