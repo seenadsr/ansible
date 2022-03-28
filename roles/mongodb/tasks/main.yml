@@ -24,6 +24,21 @@
      state: restarted
      enabled: yes
 
+- name: download and extract the files
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/mongodb/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: Load the schemas js files
+  community.mongodb.mongodb_shell:
+    file: '/tmp/mongodb-main/catalogue.js'
+    idempotent: yes
+
+- name: Load the schemas js files
+  community.mongodb.mongodb_shell:
+    file: '/tmp/mongodb-main/user.js'
+    idempotent: yes
 
 
 
