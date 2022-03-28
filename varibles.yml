@@ -42,7 +42,7 @@
 
     - name: print out put of register
       ansible.builtin.debug:
-        msg: "{{out}}"
+        msg: "{{OUT}}"
 
 
 
