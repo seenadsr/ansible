@@ -7,11 +7,10 @@
     name: nginx
     state: installed
 
-- name: download and extract the files
-  ansible.builtin.unarchive:
-    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
-    dest: /tmp
-    remote_src: yes
+- name: download and extract
+  include_roles:
+    name: common
+    tasks_from: download
 
 - name: Remove directory
   ansible.builtin.file:
