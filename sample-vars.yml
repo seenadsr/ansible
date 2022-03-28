@@ -1,1 +1,4 @@
-URL: file.example.com
+- name: play on roles
+  hosts: all
+  roles:
+    - demo
