@@ -4,7 +4,7 @@
 
 - name: copy mangodb config file
   ansible.builtin.copy:
-    src: mangodb.repo
+    src: mongodb.repo
     dest: /etc/yum.repos.d/
 
 - name: Install mongoDB
