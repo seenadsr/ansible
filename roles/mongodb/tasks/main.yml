@@ -25,7 +25,7 @@
      enabled: yes
 
 - name: download and extract
-  include_roles:
+  include_role:
     name: common
     tasks_from: download
 
