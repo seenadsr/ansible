@@ -1,3 +1,11 @@
 - name: print mongodb
   ansible.builtin.debug:
     msg: mongodb
+
+- name: Install mongoDB
+  ansible.builtin.yum:
+    name: mongodb-org
+    state: installed
+
+
+
