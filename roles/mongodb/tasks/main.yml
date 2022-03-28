@@ -12,5 +12,18 @@
     name: mongodb-org
     state: installed
 
+- name: update listzen IP address
+  ansible.builtin.replace:
+    path: /etc/mongodb.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: Start mongoDB services
+  ansible.builtin.systemd:
+     name: mongod
+     state: restarted
+     enabled: yes
+
+
 
 
